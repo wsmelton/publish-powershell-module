@@ -10,7 +10,10 @@ inputs:
     required: true
 runs:
   using: 'docker'
-  image: 'docker://powershell:6.2.2-ubuntu-18.04'
+  image: 'dockerfile'
   args:
     - ${{ inputs.tags }}
     - ${{ inputs.apiKey }}
+branding:
+  icon: 'upload'
+  color: 'blue'
