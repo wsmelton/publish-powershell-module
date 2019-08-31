@@ -8,5 +8,5 @@ jobs:
     runs-on: ubuntu-18.04
 
     steps:
-      - name: test run
       - uses: ./.github/actions/publish-powershell-module
+      - name: test run
