@@ -5,7 +5,7 @@ workflow "main" {
 
 action "Publish to PowerShell Gallery" {
   uses = "./"
-  secrets = ["apikey"]
+  secrets = ["apikey","ACTIONS_RUNNER_DEBUG"]
   env = {
     TAGS=['test1','test2','test3']
   }
