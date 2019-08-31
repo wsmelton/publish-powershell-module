@@ -1,0 +1,7 @@
+on: push
+
+jobs:
+
+  test_run:
+    name: test run
+    uses: ./.github/actions/publish-powershell-module
