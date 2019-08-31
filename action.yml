@@ -1,12 +1,16 @@
-name: 'Container Action Template'
-description: 'Get started with Container actions'
-author: 'GitHub'
-inputs: 
-  myInput:
-    description: 'Input to use'
-    default: 'world'
+name: 'Publish to PowerShell Gallery'
+description: 'Publishing your module to the PowerShell Gallery'
+author: 'Shawn Melton'
+inputs:
+  tags:
+    description: 'Tags to apply to your module in PowerShell Gallery. Should be comma list.'
+    required: true
+  apiKey:
+    description: 'PowerShell Gallery API Key for publishing to your account'
+    required: true
 runs:
   using: 'docker'
-  image: 'Dockerfile'
+  image: 'docker://powershell:6.2.2-ubuntu-18.04'
   args:
-    - ${{ inputs.myInput }}
+    - ${{ inputs.tags }}
+    - ${{ inputs.apiKey }}
