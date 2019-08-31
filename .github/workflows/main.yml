@@ -1,0 +1,12 @@
+on:
+  push:
+    branches:
+      - beta
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+
+    steps:
+      - name: test run
+      - uses: ./.github/actions/publish-powershell-module
