@@ -5,9 +5,9 @@ jobs:
     name: Testing
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      # - uses: actions/checkout@v1
       - name: testit
         uses: wsmelton/publish-powershell-module@beta
         with:
-          tags: "test1,test2,test3"
+          tags: test1,test2,test3
           apiKey: ${{secrets.APIKEY}}
